@@ -1,3 +1,65 @@
 @charset "UTF-8";
 
 /*todas demais mídias*/
+/*
+pequenas telas : ate 600px
+celular : 600px ate 768px
+tablet : 768px ate 992px
+desktop: 992px ate 1200px
+grandes telas : acima de 1200px
+*/
+
+@media print {
+    body {
+        background-image: url(../modulo4----html-e-css/imagens/back-print.jpg);
+    }
+
+    *{
+        font-family: 'Times New Roman', Times, serif;
+    }
+    main {
+        width: 90vw;
+        border: 2px solid black;
+    }
+    main > h1 {
+        text-shadow: none;
+        color: black;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:992px){
+    body{
+        background-image: url(../modulo4----html-e-css/imagens/back-tablet.jpg);
+    }
+
+    img#phone{
+        display: none;
+    }
+    img#tablet{
+        display: block;
+    }
+    img#print{
+        display: none;
+    }
+    img#pc{
+        display: none;
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:1200px) {
+    body{
+        background-image: url(../modulo4----html-e-css/imagens/back-pc.jpg);
+    }
+    img#phone{
+        display: none;
+    }
+    img#tablet{
+        display: none;
+    }
+    img#print{
+        display: none;
+    }
+    img#pc{
+        display: block;
+    }
+}
